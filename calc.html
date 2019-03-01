@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <title>Kalkulator</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div id='calc-contain'>
+  
+        <form name="calculator">
+            <p style="text:align='center'; font-family: Georgia, serif; font-size: 20px;" align = "center">Kalkulator</p>
+            
+            
+            <br>
+            
+            <input type="button" value=" 1 " onclick="calculator.nilai.value += '1'" />
+            <input type="button" value=" 2 " onclick="calculator.nilai.value += '2'" />
+            <input type="button" value=" 3 " onclick="calculator.nilai.value += '3'" />
+            <input type="button" value=" + " onclick="tambah()" />
+            
+            <br/>
+            
+            <input type="button" value=" 4 " onclick="calculator.nilai.value += '4'" />
+            <input type="button" value=" 5 " onclick="calculator.nilai.value += '5'" />
+            <input type="button" value=" 6 " onclick="calculator.nilai.value += '6'" />
+            <input type="button" value=" - " onclick="kurang()" />
+            </br>
+          
+            <input type="button" value=" 7 " onclick="calculator.nilai.value += '7'" />
+            <input type="button" value=" 8 " onclick="calculator.nilai.value += '8'" />
+            <input type="button" value=" 9 " onclick="calculator.nilai.value += '9'" />
+            <input type="button" value=" x " onclick="kali()" />
+            </br>
+            <button type="reset">c</button>
+            <input type="button" value=" 0 " onclick="calculator.nilai.value += '0'" />
+            <input type="button" value="hitung" onclick="hitung()" />
+            <input type="button" value=" / " onclick="bagi()" />
+            
+            </br>
+            <input type='text' id="d" name='nilai' placeholder='Nilai yang ingin di hitung' readonly/>
+            <input type="button" onclick="back()" style="width: 10%" value="backspace">
+            <input type='text' name='hasil' placeholder='hasil perhitungan' readonly/>
+            <div id="jam-digital">
+                    <div><p>Jam Saat Ini</p></div>
+                    <div id="hours"><p id="jam"></p></div>
+                    <div id="minute"><p id="menit"></p></div>
+                    <div id="second"><p id="detik"></p></div>
+            </div>
+            <p id="nama">Saputra Kamandanu</p>
+            <script type="text/javascript">
+            function tambah(){
+                val = document.getElementsByName('nilai')[0].value;
+                document.getElementsByName('nilai')[0].value += "+";
+            }
+            function kurang(){
+                val = document.getElementsByName('nilai')[0].value;
+                document.getElementsByName('nilai')[0].value += "-";
+            }
+            function kali(){
+                val = document.getElementsByName('nilai')[0].value;
+                document.getElementsByName('nilai')[0].value += "*";
+            }
+            function bagi(){
+                val = document.getElementsByName('nilai')[0].value;
+                document.getElementsByName('nilai')[0].value += "/";
+            }
+            function hitung(){
+                val = document.getElementsByName('nilai')[0].value;
+                document.getElementsByName('hasil')[0].value = eval(val);
+            }
+            function back() {
+                var value = document.getElementById("d").value;
+                document.getElementById("d").value = value.substr(0, value.length - 1);
+            }
+            window.setTimeout("waktu()",1000);
+    function waktu() {
+        var tanggal = new Date();
+        setTimeout("waktu()",1000);
+        document.getElementById("jam").innerHTML = tanggal.getHours();
+        document.getElementById("menit").innerHTML = tanggal.getMinutes();
+        document.getElementById("detik").innerHTML = tanggal.getSeconds();
+    }
+            </script>
+        </form>
+    </div>
+    
+    
+    </body>
+</html>

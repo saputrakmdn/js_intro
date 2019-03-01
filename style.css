@@ -1,0 +1,90 @@
+#agh{
+    position: relative;
+    float: right;
+    margin-top: 15px;
+  }
+  #agh p{
+    font-size: 20px;
+    font-weight: 900;
+  }
+  input[type=button] {
+    background: lightGray;
+    width: 20%;
+    font-size: 20px;
+    font-weight: 900;
+    border-radius: 7px;
+    margin-left: 13px;
+    margin-top: 10px;
+  }
+  input[type=button]:active {
+    background-color: #066db1;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
+  input[type=button]:hover {
+    background-color: #034d92;
+    color: white;
+  }
+  
+  input[type = text] {
+    position: relative;
+    display: block;
+    margin: 10px;
+    font-size: 20px;
+    padding: 10px;
+    box-shadow: 4px 0px 12px blanchedalmond inset;
+    width: 82%;
+  }
+  #calc-contain{
+      margin: 10px 10px 10px 10px;
+      border: 2px double;
+  }
+  button {
+    background: lightGray;
+    width: 20%;
+    font-size: 20px;
+    font-weight: 900;
+    border-radius: 7px;
+    margin-left: 13px;
+    margin-top: 10px;
+  }
+  button:active {
+    background-color: #066db1;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
+  button:hover {
+    background-color: #034d92;
+    color: white;
+  }
+  body{
+      background-color: #e23b12;
+  }
+  #jam-digital{overflow:hidden; width:350px}
+  #hours{float:left; width:100px; height:50px; background-color:#6B9AB8; margin-right:25px}
+  #minute{float:left; width:100px; height:50px; background-color:#A5B1CB}
+  #second{float:right; width:100px; height:50px; background-color:#FF618A; margin-left:25px}
+  #jam-digital p{color:#FFF; font-size:36px; text-align:center; margin-top:4px}
+  #nama {
+    position: relative;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    font-size: 2em;
+    letter-spacing: 4px;
+    overflow: hidden;
+    background: linear-gradient(90deg, #000, #fff, #000);
+    background-repeat: no-repeat;
+    background-size: 80%;
+    animation: animate 3s linear infinite;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0);
+  }
+  
+  @keyframes animate {
+    0% {
+      background-position: -500%;
+    }
+    100% {
+      background-position: 500%;
+    }
+  }
